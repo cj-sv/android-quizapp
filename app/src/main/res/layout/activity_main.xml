@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.quizapp.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--Question Number 1-->
+        <TextView
+            style="@style/QuestionItem"
+            android:text="@string/quest_one"/>
+
+            <RadioGroup
+                android:id="@+id/radio_group_quest_one"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="32dp"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/ken_thompson"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ken Thompson"
+                    android:onClick="onRadioQuestionOne"/>
+
+                <RadioButton
+                    android:id="@+id/dennis_ritchie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dennis Ritche"
+                    android:onClick="onRadioQuestionOne"/>
+
+                <RadioButton
+                    android:id="@+id/linus_torvalds"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Linus Torvalds"
+                    android:onClick="onRadioQuestionOne"/>
+            </RadioGroup>
+
+        <!--Question Number 2-->
+        <TextView
+            style="@style/QuestionItem"
+            android:text="@string/quest_two"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/tux"/>
+
+        <EditText
+            android:id="@+id/text_box_quest_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:inputType="text"
+            android:hint="Your Answer"/>
+
+        <!--Question Number 3-->
+        <TextView
+            style="@style/QuestionItem"
+            android:text="@string/quest_three"/>
+
+        <CheckBox
+            android:id="@+id/checkbox_ubuntu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:text="Ubuntu"/>
+
+        <CheckBox
+            android:id="@+id/checkbox_mint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:text="Linux Mint"/>
+
+        <CheckBox
+            android:id="@+id/checkbox_antergos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:text="Antergos"/>
+
+        <CheckBox
+            android:id="@+id/checkbox_solus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:text="Solus"/>
+
+        <CheckBox
+            android:id="@+id/checkbox_steam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:text="SteamOS"/>
+
+        <!--Question Number 4-->
+        <TextView
+            style="@style/QuestionItem"
+            android:text="@string/quest_four"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:padding="8dp"
+            android:src="@drawable/ubuntu"/>
+
+        <RadioGroup
+            android:id="@+id/radio_group_quest_four"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <RadioButton
+                android:id="@+id/circle_of_friends"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Circle of Friends"
+                android:onClick="onRadioQuestionFour"/>
+
+            <RadioButton
+                android:id="@+id/unity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Unity"
+                android:onClick="onRadioQuestionFour"/>
+
+        </RadioGroup>
+
+        <!--Submit Quiz Button-->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            android:text="Submit Quiz"
+            android:onClick="submitQuiz"/>
+
+    </LinearLayout>
+
+</ScrollView>
